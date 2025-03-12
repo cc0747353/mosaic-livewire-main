@@ -10,7 +10,7 @@ class TransactionSeeder extends Seeder
 {
     protected $data = [
         [
-            'id' => 1,
+
             'payable_type' => 'App\Models\User',
             'payable_id' => 1,
             'wallet_id' => 1,
@@ -23,7 +23,7 @@ class TransactionSeeder extends Seeder
             'updated_at' => '2025-03-12 16:34:19',
         ],
         [
-            'id' => 2,
+
             'payable_type' => 'App\Models\User',
             'payable_id' => 1,
             'wallet_id' => 1,
@@ -36,7 +36,7 @@ class TransactionSeeder extends Seeder
             'updated_at' => '2025-03-12 16:34:19',
         ],
         [
-            'id' => 3,
+
             'payable_type' => 'App\Models\User',
             'payable_id' => 1,
             'wallet_id' => 1,
@@ -50,7 +50,7 @@ class TransactionSeeder extends Seeder
         ],
 
         [
-            'id' => 4,
+
             'payable_type' => 'App\Models\User',
             'payable_id' => 1,
             'wallet_id' => 1,
@@ -63,7 +63,7 @@ class TransactionSeeder extends Seeder
             'updated_at' => '2025-03-12 16:34:21',
         ],
         [
-            'id' => 5,
+
             'payable_type' => 'App\Models\User',
             'payable_id' => 1,
             'wallet_id' => 1,
@@ -77,7 +77,7 @@ class TransactionSeeder extends Seeder
         ],
         // Additional 15 data entries
         [
-            'id' => 6,
+
             'payable_type' => 'App\Models\User',
             'payable_id' => 1,
             'wallet_id' => 1,
@@ -90,7 +90,7 @@ class TransactionSeeder extends Seeder
             'updated_at' => '2025-03-12 16:34:23',
         ],
         [
-            'id' => 7,
+
             'payable_type' => 'App\Models\User',
             'payable_id' => 1,
             'wallet_id' => 1,
@@ -103,7 +103,7 @@ class TransactionSeeder extends Seeder
             'updated_at' => '2025-03-12 16:34:24',
         ],
         [
-            'id' => 8,
+
             'payable_type' => 'App\Models\User',
             'payable_id' => 1,
             'wallet_id' => 1,
@@ -116,7 +116,7 @@ class TransactionSeeder extends Seeder
             'updated_at' => '2025-03-12 16:34:25',
         ],
         [
-            'id' => 9,
+
             'payable_type' => 'App\Models\User',
             'payable_id' => 1,
             'wallet_id' => 1,
@@ -129,7 +129,7 @@ class TransactionSeeder extends Seeder
             'updated_at' => '2025-03-12 16:34:26',
         ],
         [
-            'id' => 10,
+
             'payable_type' => 'App\Models\User',
             'payable_id' => 1,
             'wallet_id' => 1,
@@ -142,7 +142,7 @@ class TransactionSeeder extends Seeder
             'updated_at' => '2025-03-12 16:34:27',
         ],
         [
-            'id' => 11,
+
             'payable_type' => 'App\Models\User',
             'payable_id' => 1,
             'wallet_id' => 1,
@@ -155,7 +155,7 @@ class TransactionSeeder extends Seeder
             'updated_at' => '2025-03-12 16:34:28',
         ],
         [
-            'id' => 12,
+
             'payable_type' => 'App\Models\User',
             'payable_id' => 1,
             'wallet_id' => 1,
@@ -168,7 +168,7 @@ class TransactionSeeder extends Seeder
             'updated_at' => '2025-03-12 16:34:29',
         ],
         [
-            'id' => 13,
+
             'payable_type' => 'App\Models\User',
             'payable_id' => 1,
             'wallet_id' => 1,
@@ -181,7 +181,7 @@ class TransactionSeeder extends Seeder
             'updated_at' => '2025-03-12 16:34:30',
         ],
         [
-            'id' => 14,
+
             'payable_type' => 'App\Models\User',
             'payable_id' => 1,
             'wallet_id' => 1,
@@ -194,7 +194,7 @@ class TransactionSeeder extends Seeder
             'updated_at' => '2025-03-12 16:34:31',
         ],
         [
-            'id' => 15,
+
             'payable_type' => 'App\Models\User',
             'payable_id' => 1,
             'wallet_id' => 1,
@@ -207,7 +207,7 @@ class TransactionSeeder extends Seeder
             'updated_at' => '2025-03-12 16:34:32',
         ],
         [
-            'id' => 16,
+
             'payable_type' => 'App\Models\User',
             'payable_id' => 1,
             'wallet_id' => 1,
@@ -220,7 +220,7 @@ class TransactionSeeder extends Seeder
             'updated_at' => '2025-03-12 16:34:33',
         ],
         [
-            'id' => 17,
+
             'payable_type' => 'App\Models\User',
             'payable_id' => 1,
             'wallet_id' => 1,
@@ -233,7 +233,7 @@ class TransactionSeeder extends Seeder
             'updated_at' => '2025-03-12 16:34:34',
         ],
         [
-            'id' => 18,
+
             'payable_type' => 'App\Models\User',
             'payable_id' => 1,
             'wallet_id' => 1,
@@ -246,7 +246,7 @@ class TransactionSeeder extends Seeder
             'updated_at' => '2025-03-12 16:34:35',
         ],
         [
-            'id' => 19,
+
             'payable_type' => 'App\Models\User',
             'payable_id' => 1,
             'wallet_id' => 1,
@@ -270,7 +270,6 @@ class TransactionSeeder extends Seeder
     {
         foreach($this->data as $d) {
             Transaction::create([
-                'id' => $d['id'],
                 'payable_type' => $d['payable_type'],
                 'payable_id' => $d['payable_id'],
                 'wallet_id' => $d['wallet_id'],

@@ -32,7 +32,7 @@ class DatabaseSeeder extends Seeder
             OrderSeeder::class,
             InvoiceSeeder::class,
             MemberSeeder::class,
-        //    TransactionSeeder::class,
+           TransactionSeeder::class,
             JobSeeder::class,
             CampaignSeeder::class,
             MarketerSeeder::class,

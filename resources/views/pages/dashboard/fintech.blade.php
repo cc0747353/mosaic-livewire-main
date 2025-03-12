@@ -30,8 +30,8 @@
         <!-- Cards -->
         <div class="grid grid-cols-12 gap-6">
 
-            <!-- Page Intro -->                     
-            <x-fintech.fintech-intro />
+            <!-- Page Intro paas the $walletBalance to the component-->
+            <x-fintech.fintech-intro :walletBalance="$walletBalance" />
 
             <!-- Line chart (Portfolio Returns) -->
             <x-fintech.fintech-card-01 />

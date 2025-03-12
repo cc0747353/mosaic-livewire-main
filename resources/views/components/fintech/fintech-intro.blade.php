@@ -1,3 +1,8 @@
+{{-- accept the variable $walletBalance --}}
+@props(['walletBalance'])
+
+{{-- the component --}}
+
 <div class="flex flex-col col-span-full bg-white shadow-lg rounded-sm border border-slate-200">
     <div class="px-5 py-6">
 
@@ -11,7 +16,7 @@
                 <!-- User info -->
                 <div>
                     <div class="mb-2">Hey <strong class="font-medium text-slate-800">Mary</strong> 👋, this is your current balance:</div>
-                    <div class="text-3xl font-bold text-emerald-500">$47,347.09</div>
+                    <div class="text-3xl font-bold text-emerald-500">$ {{ $walletBalance }}</div>
                 </div>
             </div>
             <!-- Right side -->

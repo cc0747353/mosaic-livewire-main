@@ -39,6 +39,11 @@
          */
         public function fintech()
         {
-            return view('pages/dashboard/fintech');
+            //get the authenticated user
+            $user = auth()->user();
+            //get the user's wallet balance
+
+            $walletBalance = $user->balanceFloatNum;
+            return view('pages/dashboard/fintech', ['walletBalance' => $walletBalance]);
         }
     }
