@@ -10,11 +10,8 @@
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
 
-        <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <script src="{{ asset('build/assets/app.b94b775d.js') }}"></script>
 
-        <!-- Styles -->
-        @livewireStyles
     </head>
     <body class="font-sans antialiased">
         <x-jet-banner />
@@ -39,6 +36,6 @@
 
         @stack('modals')
 
-        @livewireScripts
+        <script src="{{ asset('build/assets/app.b94b775d.js') }}"></script>
     </body>
 </html>

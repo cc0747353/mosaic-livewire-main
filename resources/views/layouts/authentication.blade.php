@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
         <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <link rel="stylesheet" href="{{ asset('build/assets/app.5cad5278.css') }}">
     </head>
     <body class="font-inter antialiased bg-slate-100 text-slate-600">
 
@@ -51,5 +51,7 @@
             </div>
 
         </main>
+        <script src="{{ asset('build/assets/app.b94b775d.js') }}"></script>
+
     </body>
 </html>
