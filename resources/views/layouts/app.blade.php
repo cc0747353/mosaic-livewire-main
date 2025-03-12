@@ -11,18 +11,16 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
         <!-- Styles -->
-        {{-- @livewireStyles --}}
-
-        <link rel="stylesheet" href="{{ asset('build/assets/app.5cad5278.css') }}">
+        @livewireStyles
 
         <!-- Scripts -->
-        {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body
         class="font-inter antialiased bg-slate-100 text-slate-600"
         :class="{ 'sidebar-expanded': sidebarExpanded }"
         x-data="{ sidebarOpen: false, sidebarExpanded: localStorage.getItem('sidebar-expanded') == 'true' }"
-        x-init="$watch('sidebarExpanded', value => localStorage.setItem('sidebar-expanded', value))"
+        x-init="$watch('sidebarExpanded', value => localStorage.setItem('sidebar-expanded', value))"    
     >
 
         <script>
@@ -50,7 +48,7 @@
             </div>
 
         </div>
-        {{-- @livewireScripts --}}
-        <script src="{{ asset('build/assets/app.b94b775d.js') }}"></script>
+
+        @livewireScripts
     </body>
 </html>
