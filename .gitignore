@@ -1,3 +1,5 @@
 /.history
 .env
 .htaccess
+/node_modules
+/vendor
