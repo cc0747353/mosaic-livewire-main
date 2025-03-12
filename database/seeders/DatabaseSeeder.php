@@ -2,8 +2,10 @@
 
 namespace Database\Seeders;
 
+use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,8 +16,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        User::factory()->create([
+            'name' => 'admin',
+            'email' => 'admin@ewbcredit.org',
+            'password' => Hash::make('Password'),
+        ]);
 
         $this->call([
+
+
             DashboardTableSeeder::class,
             AnalyticsTableSeeder::class,
             FintechTableSeeder::class,
@@ -23,7 +32,7 @@ class DatabaseSeeder extends Seeder
             OrderSeeder::class,
             InvoiceSeeder::class,
             MemberSeeder::class,
-            TransactionSeeder::class,
+        //    TransactionSeeder::class,
             JobSeeder::class,
             CampaignSeeder::class,
             MarketerSeeder::class,

@@ -3,7 +3,7 @@
       <div class="container flex-lg-row flex-nowrap align-items-center">
         <div class="navbar-brand w-100">
           <a href="/">
-            <img src="/assets/img/logo-dark.png" alt="" />
+            <img class="" src="/logo.svg" width="170px" height="30px" alt="">
           </a>
         </div>
         <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">

@@ -28,7 +28,7 @@
             </button>
             <!-- Logo -->
             <a class="block" href="{{ route('dashboard') }}">
-                <img class="mb-4" src="/assets/img/logo-dark.png" alt="">
+                <img class="mt-2" src="/logo-white.svg" width="170px" height="30px" alt="">
             </a>
         </div>
 

@@ -34,8 +34,7 @@
             <div class="row gy-6 gy-lg-0">
                 <div class="col-md-4 col-lg-3">
                     <div class="widget" >
-                        <img class="mb-4" src="/assets/img/logo-dark.png"
-                             alt="">
+                        <img class="" src="/logo.svg" width="170px" height="30px" alt="">
                         <p class="mb-4">© 2022 Sandbox. <br class="d-none d-lg-block">All rights reserved.</p>
                         <nav class="nav social ">
                             <a href="#"><i class="uil uil-twitter"></i></a>

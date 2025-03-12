@@ -28,9 +28,8 @@
                         <div class="flex-1">
                             <div class="flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8">
                                 <!-- Logo -->
-                                <a class="block" href="{{ route('dashboard') }}">
-                                    <img class="mb-4" src="/assets/img/logo-dark.png" alt="">
-                                </a>
+                                <a class="block" href="{{ route('home') }}">
+                                    <img class="" src="/logo.svg" width="170px" height="30px" alt="">                                </a>
                             </div>
                         </div>
 
