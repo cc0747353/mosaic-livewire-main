@@ -35,9 +35,11 @@
                     <span class="lg:hidden lg:sidebar-expanded:block 2xl:block">Pages</span>
                 </h3>
                 <ul class="mt-3">
+
                     <!-- Dashboard -->
                     <li class="px-3 py-2 rounded-sm mb-0.5 last:mb-0 @if (in_array(Request::segment(1), ['dashboard'])) {{ 'bg-slate-900' }} @endif"
                         x-data="{ open: {{ in_array(Request::segment(1), ['dashboard']) ? 1 : 0 }} }">
+
                         <a class="block text-slate-200 hover:text-white truncate transition duration-150 @if (in_array(Request::segment(1), ['dashboard'])) {{ 'hover:text-slate-200' }} @endif"
                             href="#0" @click.prevent="sidebarExpanded ? open = !open : sidebarExpanded = true">
                             <div class="flex items-center justify-between">
@@ -66,6 +68,7 @@
                                 </div>
                             </div>
                         </a>
+
                         <div class="lg:hidden lg:sidebar-expanded:block 2xl:block">
                             <ul class="pl-9 mt-1 @if (!in_array(Request::segment(1), ['dashboard'])) {{ 'hidden' }} @endif"
                                 :class="open ? '!block' : 'hidden'">
@@ -92,7 +95,9 @@
                                 </li>
                             </ul>
                         </div>
+
                     </li>
+
                     <!-- E-Commerce -->
                     <li class="px-3 py-2 rounded-sm mb-0.5 last:mb-0 @if (in_array(Request::segment(1), ['ecommerce'])) {{ 'bg-slate-900' }} @endif"
                         x-data="{ open: {{ in_array(Request::segment(1), ['ecommerce']) ? 1 : 0 }} }">
@@ -204,6 +209,7 @@
                             </ul>
                         </div>
                     </li>
+
                     <!-- Community -->
                     <li class="px-3 py-2 rounded-sm mb-0.5 last:mb-0 @if (in_array(Request::segment(1), ['community'])) {{ 'bg-slate-900' }} @endif"
                         x-data="{ open: {{ in_array(Request::segment(1), ['community']) ? 1 : 0 }} }">
@@ -298,6 +304,7 @@
                             </ul>
                         </div>
                     </li>
+
                     <!-- Finance -->
                     <li class="px-3 py-2 rounded-sm mb-0.5 last:mb-0 @if (in_array(Request::segment(1), ['finance'])) {{ 'bg-slate-900' }} @endif"
                         x-data="{ open: {{ in_array(Request::segment(1), ['finance']) ? 1 : 0 }} }">
@@ -357,6 +364,7 @@
                             </ul>
                         </div>
                     </li>
+
                     <!-- Job Board -->
                     <li class="px-3 py-2 rounded-sm mb-0.5 last:mb-0 @if (in_array(Request::segment(1), ['job'])) {{ 'bg-slate-900' }} @endif"
                         x-data="{ open: {{ in_array(Request::segment(1), ['job']) ? 1 : 0 }} }">
@@ -418,6 +426,7 @@
                             </ul>
                         </div>
                     </li>
+
                     <!-- Tasks -->
                     <li class="px-3 py-2 rounded-sm mb-0.5 last:mb-0 @if (in_array(Request::segment(1), ['tasks'])) {{ 'bg-slate-900' }} @endif"
                         x-data="{ open: {{ in_array(Request::segment(1), ['tasks']) ? 1 : 0 }} }">
@@ -469,6 +478,7 @@
                             </ul>
                         </div>
                     </li>
+
                     <!-- Messages -->
                     <li
                         class="px-3 py-2 rounded-sm mb-0.5 last:mb-0 @if (in_array(Request::segment(1), ['messages'])) {{ 'bg-slate-900' }} @endif">
@@ -495,6 +505,7 @@
                             </div>
                         </a>
                     </li>
+
                     <!-- Inbox -->
                     <li
                         class="px-3 py-2 rounded-sm mb-0.5 last:mb-0 @if (in_array(Request::segment(1), ['inbox'])) {{ 'bg-slate-900' }} @endif">
@@ -514,6 +525,7 @@
                             </div>
                         </a>
                     </li>
+
                     <!-- Calendar -->
                     <li
                         class="px-3 py-2 rounded-sm mb-0.5 last:mb-0 @if (in_array(Request::segment(1), ['calendar'])) {{ 'bg-slate-900' }} @endif">
@@ -533,6 +545,7 @@
                             </div>
                         </a>
                     </li>
+
                     <!-- Campaigns -->
                     <li
                         class="px-3 py-2 rounded-sm mb-0.5 last:mb-0 @if (in_array(Request::segment(1), ['campaigns'])) {{ 'bg-slate-900' }} @endif">
@@ -552,6 +565,7 @@
                             </div>
                         </a>
                     </li>
+
                     <!-- Settings -->
                     <li class="px-3 py-2 rounded-sm mb-0.5 last:mb-0 @if (in_array(Request::segment(1), ['settings'])) {{ 'bg-slate-900' }} @endif"
                         x-data="{ open: {{ in_array(Request::segment(1), ['settings']) ? 1 : 0 }} }">
@@ -639,6 +653,7 @@
                             </ul>
                         </div>
                     </li>
+
                     <!-- Utility -->
                     <li class="px-3 py-2 rounded-sm mb-0.5 last:mb-0 @if (in_array(Request::segment(1), ['utility'])) {{ 'bg-slate-900' }} @endif"
                         x-data="{ open: {{ in_array(Request::segment(1), ['utility']) ? 1 : 0 }} }">
@@ -725,6 +740,7 @@
                     </li>
                 </ul>
             </div>
+
             <!-- More group -->
             <div>
                 <h3 class="text-xs uppercase text-slate-500 font-semibold pl-3">
@@ -733,6 +749,7 @@
                     <span class="lg:hidden lg:sidebar-expanded:block 2xl:block">More</span>
                 </h3>
                 <ul class="mt-3">
+
                     <!-- Authentication -->
                     <li class="px-3 py-2 rounded-sm mb-0.5 last:mb-0" x-data="{ open: false }">
                         <a class="block text-slate-200 hover:text-white transition duration-150"
@@ -799,6 +816,7 @@
                             </ul>
                         </div>
                     </li>
+
                     <!-- Onboarding -->
                     <li class="px-3 py-2 rounded-sm mb-0.5 last:mb-0" x-data="{ open: false }">
                         <a class="block text-slate-200 hover:text-white transition duration-150"
@@ -863,6 +881,7 @@
                             </ul>
                         </div>
                     </li>
+
                     <!-- Components -->
                     <li class="px-3 py-2 rounded-sm mb-0.5 last:mb-0 @if (in_array(Request::segment(1), ['component'])) {{ 'bg-slate-900' }} @endif"
                         x-data="{ open: {{ in_array(Request::segment(1), ['component']) ? 1 : 0 }} }">
