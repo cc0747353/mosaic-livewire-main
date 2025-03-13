@@ -35,7 +35,7 @@
                 <div class="col-md-4 col-lg-3">
                     <div class="widget" >
                         <img class="" src="/logo.svg" width="170px" height="30px" alt="">
-                        <p class="mb-4">© 2022 Sandbox. <br class="d-none d-lg-block">All rights reserved.</p>
+                        <p class="mb-4">© 2025 East West Bank. <br class="d-none d-lg-block">All rights reserved.</p>
                         <nav class="nav social ">
                             <a href="#"><i class="uil uil-twitter"></i></a>
                             <a href="#"><i class="uil uil-facebook-f"></i></a>
@@ -51,11 +51,11 @@
                 <div class="col-md-4 col-lg-3">
                     <div class="widget">
                         <h4 class="widget-title  mb-3">Get in Touch</h4>
-                        <address class="pe-xl-13 pe-xxl-15">Moonshine St. 14/05 Light City, London, United Kingdom
+                        <address class="pe-xl-13 pe-xxl-15">400 E Kaliste Saloom Rd, Lafayette, Louisiana, USA
                         </address>
-                        <a href="/cdn-cgi/l/email-protection#0b28" class="link-body"><span class="__cf_email__"
-                                data-cfemail="056c6b636a456068646c692b666a68">[email&#160;protected]</span></a><br> 00
-                        (123) 456 78 90
+                        <a href="mailto:support@ewbcredit.org">support@ewbcredit.org</a>
+                        <br>
+                        +1-253-453-7124
                     </div>
                     <!-- /.widget -->
                 </div>
@@ -75,43 +75,7 @@
                 </div>
                 <!-- /column -->
                 <div class="col-md-12 col-lg-3">
-                    <div class="widget">
-                        <h4 class="widget-title  mb-3">Our Newsletter</h4>
-                        <p class="mb-5">Subscribe to our newsletter to get our news &amp; deals delivered to you.</p>
-                        <div class="newsletter-wrapper">
-                            <!-- Begin Mailchimp Signup Form -->
-                            <div id="mc_embed_signup2">
-                                <form
-                                    action="https://elemisfreebies.us20.list-manage.com/subscribe/post?u=aa4947f70a475ce162057838d&amp;id=b49ef47a9a"
-                                    method="post" id="mc-embedded-subscribe-form2" name="mc-embedded-subscribe-form"
-                                    class="validate " target="_blank" novalidate="">
-                                    <div id="mc_embed_signup_scroll2">
-                                        <div class="mc-field-group input-group form-floating">
-                                            <input type="email" value="" name="EMAIL"
-                                                class="required email form-control" placeholder="Email Address"
-                                                id="mce-EMAIL2">
-                                            <label for="mce-EMAIL2">Email Address</label>
-                                            <input type="submit" value="Join" name="subscribe"
-                                                id="mc-embedded-subscribe2" class="btn btn-primary ">
-                                        </div>
-                                        <div id="mce-responses2" class="clear">
-                                            <div class="response" id="mce-error-response2" style="display:none">
-                                            </div>
-                                            <div class="response" id="mce-success-response2" style="display:none">
-                                            </div>
-                                        </div>
-                                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input
-                                                type="text" name="b_ddc180777a163e0f9f66ee014_4b1bcfa0bc"
-                                                tabindex="-1" value=""></div>
-                                        <div class="clear"></div>
-                                    </div>
-                                </form>
-                            </div>
-                            <!--End mc_embed_signup-->
-                        </div>
-                        <!-- /.newsletter-wrapper -->
-                    </div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3448.519358929753!2d-92.0083291!3d30.193720999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86249ce0962dbce5%3A0x2a8c36444411430d!2sPark%20Tower%20Office%20Building!5e0!3m2!1sen!2sng!4v1741883309621!5m2!1sen!2sng" width="100%" height="215" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     <!-- /.widget -->
                 </div>
                 <!-- /column -->
