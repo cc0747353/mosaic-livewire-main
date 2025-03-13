@@ -13,7 +13,7 @@
                         <!-- Header -->
                         <div class="flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8">
                             <!-- Logo -->
-                            <a class="block" href="{{ route('dashboard') }}">
+                            <a class="block" href="{{ route('dashboard.index') }}">
                                 <svg width="32" height="32" viewBox="0 0 32 32">
                                     <defs>
                                         <linearGradient x1="28.538%" y1="20.229%" x2="100%" y2="108.156%" id="logo-a">
@@ -62,7 +62,7 @@
 
                     <div class="px-4 py-8">
                         <div class="max-w-md mx-auto">
-    
+
                             <h1 class="text-3xl text-slate-800 font-bold mb-6">Company information ✨</h1>
                             <!-- Form -->
                             <form>
@@ -103,7 +103,7 @@
                                     <a class="btn bg-indigo-500 hover:bg-indigo-600 text-white ml-auto" href="{{ route('onboarding-04') }}">Next Step -&gt;</a>
                                 </div>
                             </form>
-    
+
                         </div>
                     </div>
 

@@ -13,7 +13,7 @@
                         <!-- Header -->
                         <div class="flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8">
                             <!-- Logo -->
-                            <a class="block" href="{{ route('dashboard') }}">
+                            <a class="block" href="{{ route('dashboard.index') }}">
                                 <svg width="32" height="32" viewBox="0 0 32 32">
                                     <defs>
                                         <linearGradient x1="28.538%" y1="20.229%" x2="100%" y2="108.156%" id="logo-a">
@@ -62,16 +62,16 @@
 
                     <div class="px-4 py-8">
                         <div class="max-w-md mx-auto">
-    
+
                             <div class="text-center">
                                 <svg class="inline-flex w-16 h-16 fill-current mb-6" viewBox="0 0 64 64">
                                     <circle class="text-emerald-100" cx="32" cy="32" r="32" />
                                     <path class="text-emerald-500" d="m28.5 41-8-8 3-3 5 5 12-12 3 3z" />
                                 </svg>
                                 <h1 class="text-3xl text-slate-800 font-bold mb-8">Nice to have you, Acme Inc. 🙌</h1>
-                                <a class="btn bg-indigo-500 hover:bg-indigo-600 text-white" href="{{ route('dashboard') }}">Go To Dashboard -&gt;</a>
+                                <a class="btn bg-indigo-500 hover:bg-indigo-600 text-white" href="{{ route('dashboard.index') }}">Go To Dashboard -&gt;</a>
                             </div>
-    
+
                         </div>
                     </div>
 

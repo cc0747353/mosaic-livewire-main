@@ -20,7 +20,7 @@
                 </svg>
             </button>
             <!-- Logo -->
-            <a class="block" href="{{ route('dashboard') }}">
+            <a class="block" href="{{ route('dashboard.index') }}">
                 <img class="mt-2" src="/logo-white.svg" width="170px" height="30px" alt="">
             </a>
         </div>
@@ -34,7 +34,229 @@
                         aria-hidden="true">•••</span>
                     <span class="lg:hidden lg:sidebar-expanded:block 2xl:block">Pages</span>
                 </h3>
+
                 <ul class="mt-3">
+                    {{-- Dashboard Link --}}
+                    @php
+                        $isDashboardActive = in_array(Request::segment(1), ['dashboard']);
+                    @endphp
+                    <x-sidebar-link :active="$isDashboardActive" :force-open="$isDashboardActive" href="#0" segment="dashboard">
+                        <x-slot name="icon">
+                            <x-sidebar-link-icon :active="$isDashboardActive">
+                                <path
+                                    class="fill-current @if ($isDashboardActive) text-indigo-500 @else text-slate-400 @endif"
+                                    d="M12 0C5.383 0 0 5.383 0 12s5.383 12 12 12 12-5.383 12-12S18.617 0 12 0z" />
+                                <path
+                                    class="fill-current @if ($isDashboardActive) text-indigo-600 @else text-slate-600 @endif"
+                                    d="M12 3c-4.963 0-9 4.037-9 9s4.037 9 9 9 9-4.037 9-9-4.037-9-9-9z" />
+                                <path
+                                    class="fill-current @if ($isDashboardActive) text-indigo-200 @else text-slate-400 @endif"
+                                    d="M12 15c-1.654 0-3-1.346-3-3 0-.462.113-.894.3-1.285L6 6l4.714 3.301A2.973 2.973 0 0112 9c1.654 0 3 1.346 3 3s-1.346 3-3 3z" />
+                            </x-sidebar-link-icon>
+                        </x-slot>
+                        <x-slot name="label">
+                            Dashboard
+                        </x-slot>
+                        <x-slot name="dropdown">
+                            <x-sidebar-dropdown-link :active="Route::is('dashboard.index')" :href="route('dashboard.index')">Main</x-sidebar-dropdown-link>
+                            <x-sidebar-dropdown-link :active="Route::is('dashboard.transfer')"
+                                :href="route('dashboard.transfer')">Transfer</x-sidebar-dropdown-link>
+                            <x-sidebar-dropdown-link :active="Route::is('dashboard.payment-method')" :href="route('dashboard.payment-method')">Payment
+                                Methods</x-sidebar-dropdown-link>
+                        </x-slot>
+                    </x-sidebar-link>
+
+                    {{-- Transactions Link --}}
+                    @php
+                        $isTransactionsActive = in_array(Request::segment(1), ['transactions']);
+                    @endphp
+                    <x-sidebar-link :active="$isTransactionsActive" :force-open="$isTransactionsActive" href="#0" segment="transactions">
+                        <x-slot name="icon">
+                            <x-sidebar-link-icon :active="$isTransactionsActive">
+                                <path
+                                    class="fill-current @if ($isTransactionsActive) text-indigo-300 @else text-slate-400 @endif"
+                                    d="M13 15l11-7L11.504.136a1 1 0 00-1.019.007L0 7l13 8z" />
+                                <path
+                                    class="fill-current @if ($isTransactionsActive) text-indigo-600 @else text-slate-700 @endif"
+                                    d="M13 15L0 7v9c0 .355.189.685.496.864L13 24v-9z" />
+                                <path
+                                    class="fill-current @if ($isTransactionsActive) text-indigo-500 @else text-slate-600 @endif"
+                                    d="M13 15.047V24l10.573-7.181A.999.999 0 0024 16V8l-11 7.047z" />
+                            </x-sidebar-link-icon>
+                        </x-slot>
+                        <x-slot name="label">
+                            Transactions
+                        </x-slot>
+                        <x-slot name="dropdown">
+                            <x-sidebar-dropdown-link :active="Route::is('dashboard.transactions')" :href="route('dashboard.transactions')">All
+                                Transactions</x-sidebar-dropdown-link>
+                            <x-sidebar-dropdown-link :active="Route::is('dashboard.transactions.transfers')" :href="route('dashboard.transactions.transfers')">Transfer
+                                History</x-sidebar-dropdown-link>
+                            <x-sidebar-dropdown-link :active="Route::is('dashboard.transactions.deposits')" :href="route('dashboard.transactions.deposits')">Deposit
+                                History</x-sidebar-dropdown-link>
+                            <x-sidebar-dropdown-link :active="Route::is('dashboard.transactions.withdrawals')" :href="route('dashboard.transactions.withdrawals')">Withdrawal
+                                History</x-sidebar-dropdown-link>
+                        </x-slot>
+                    </x-sidebar-link>
+
+                    {{-- Loans Link --}}
+
+                    @php
+                        $isLoansActive = in_array(Request::segment(1), ['loans']);
+                    @endphp
+                    <x-sidebar-link :active="$isLoansActive" :force-open="$isLoansActive" href="#0" segment="loans">
+                        <x-slot name="icon">
+                            <x-sidebar-link-icon :active="$isLoansActive">
+                                <path
+                                    class="fill-current @if ($isLoansActive) text-indigo-500 @else text-slate-600 @endif"
+                                    d="M18.974 8H22a2 2 0 012 2v6h-2v5a1 1 0 01-1 1h-2a1 1 0 01-1-1v-5h-2v-6a2 2 0 012-2h.974zM20 7a2 2 0 11-.001-3.999A2 2 0 0120 7zM2.974 8H6a2 2 0 012 2v6H6v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5H0v-6a2 2 0 012-2h.974zM4 7a2 2 0 11-.001-3.999A2 2 0 014 7z" />
+                                <path
+                                    class="fill-current @if ($isLoansActive) text-indigo-300 @else text-slate-400 @endif"
+                                    d="M12 6a3 3 0 110-6 3 3 0 010 6zm2 18h-4a1 1 0 01-1-1v-6H6v-6a3 3 0 013-3h6a3 3 0 013 3v6h-3v6a1 1 0 01-1 1z" />
+                            </x-sidebar-link-icon>
+                        </x-slot>
+                        <x-slot name="label">
+                            Loans
+                        </x-slot>
+                        <x-slot name="dropdown">
+                            <x-sidebar-dropdown-link :active="Route::is('dashboard.loans')" :href="route('dashboard.loans')">Loan
+                                Plans</x-sidebar-dropdown-link>
+                            <x-sidebar-dropdown-link :active="Route::is('dashboard.loans.request-loan')" :href="route('dashboard.loans.request-loan')">Request
+                                Loan</x-sidebar-dropdown-link>
+                            <x-sidebar-dropdown-link :active="Route::is('dashboard.loans.loan-history')" :href="route('dashboard.loans.loan-history')">Loan
+                                History</x-sidebar-dropdown-link>
+                        </x-slot>
+                    </x-sidebar-link>
+
+                    {{-- Referrals --}}
+                    @php
+                        $isReferralsActive = in_array(Request::segment(1), ['referrals']);
+                    @endphp
+
+                    <x-sidebar-link :active="$isReferralsActive" :href="route('dashboard.referrals')">
+                        <x-slot name="icon">
+                            <x-sidebar-link-icon :active="$isReferralsActive">
+                                <path
+                                    class="fill-current @if ($isReferralsActive) text-indigo-500 @else text-slate-600 @endif"
+                                    d="M20 7a3 3 0 01-3 3H7a3 3 0 01-3-3 3 3 0 013-3h10a3 3 0 013 3z" />
+                                <path
+                                    class="fill-current @if ($isReferralsActive) text-indigo-300 @else text-slate-400 @endif"
+                                    d="M20 17a3 3 0 01-3 3H7a3 3 0 01-3-3 3 3 0 013-3h10a3 3 0 013 3z" />
+                                <path
+                                    class="fill-current @if ($isReferralsActive) text-indigo-600 @else text-slate-700 @endif"
+                                    d="M20 22H4a2 2 0 01-2-2V4a2 2 0 012-2h16a2 2 0 012 2v16a2 2 0 01-2 2zM4 16h16V8H4v8z" />
+                            </x-sidebar-link-icon>
+                        </x-slot>
+                        <x-slot name="label">
+                            Referrals
+                        </x-slot>
+                    </x-sidebar-link>
+
+                    {{-- Investments Link --}}
+                    @php
+                        $isInvestmentsActive = in_array(Request::segment(1), ['investments']);
+                    @endphp
+                    <x-sidebar-link :active="$isInvestmentsActive" :force-open="$isInvestmentsActive" href="#0" segment="investments">
+                        <x-slot name="icon">
+                            <x-sidebar-link-icon :active="$isInvestmentsActive">
+                                <path
+                                    class="fill-current @if ($isInvestmentsActive) text-indigo-300 @else text-slate-400 @endif"
+                                    d="M13 6.068a6.035 6.035 0 0 1 4.932 4.933H24c-.486-5.846-5.154-10.515-11-11v6.067Z" />
+                                <path
+                                    class="fill-current @if ($isInvestmentsActive) text-indigo-500 @else text-slate-700 @endif"
+                                    d="M18.007 13c-.474 2.833-2.919 5-5.864 5a5.888 5.888 0 0 1-3.694-1.304L4 20.731C6.131 22.752 8.992 24 12.143 24c6.232 0 11.35-4.851 11.857-11h-5.993Z" />
+                                <path
+                                    class="fill-current @if ($isInvestmentsActive) text-indigo-600 @else text-slate-600 @endif"
+                                    d="M6.939 15.007A5.861 5.861 0 0 1 6 11.829c0-2.937 2.167-5.376 5-5.85V0C4.85.507 0 5.614 0 11.83c0 2.695.922 5.174 2.456 7.17l4.483-3.993Z" />
+                            </x-sidebar-link-icon>
+                        </x-slot>
+                        <x-slot name="label">
+                            Investments
+                        </x-slot>
+                        <x-slot name="dropdown">
+                            <x-sidebar-dropdown-link :active="Route::is('dashboard.investments')" :href="route('dashboard.investments')">My
+                                Holdings</x-sidebar-dropdown-link>
+                            <x-sidebar-dropdown-link :active="Route::is('dashboard.investments.market-data')" :href="route('dashboard.investments.market-data')">Market
+                                Data</x-sidebar-dropdown-link>
+                        </x-slot>
+                    </x-sidebar-link>
+
+                    {{-- Insights Link --}}
+                    @php
+                        $isInsightsActive = in_array(Request::segment(1), ['insights']);
+                    @endphp
+                    <x-sidebar-link :active="$isInsightsActive" :force-open="$isInsightsActive" href="#0" segment="insights">
+                        <x-slot name="icon">
+                            <x-sidebar-link-icon :active="$isInsightsActive">
+                                <path
+                                    class="fill-current @if ($isInsightsActive) text-indigo-300 @else text-slate-400 @endif"
+                                    d="M13 6.068a6.035 6.035 0 0 1 4.932 4.933H24c-.486-5.846-5.154-10.515-11-11v6.067Z" />
+                                <path
+                                    class="fill-current @if ($isInsightsActive) text-indigo-500 @else text-slate-700 @endif"
+                                    d="M18.007 13c-.474 2.833-2.919 5-5.864 5a5.888 5.888 0 0 1-3.694-1.304L4 20.731C6.131 22.752 8.992 24 12.143 24c6.232 0 11.35-4.851 11.857-11h-5.993Z" />
+                                <path
+                                    class="fill-current @if ($isInsightsActive) text-indigo-600 @else text-slate-600 @endif"
+                                    d="M6.939 15.007A5.861 5.861 0 0 1 6 11.829c0-2.937 2.167-5.376 5-5.85V0C4.85.507 0 5.614 0 11.83c0 2.695.922 5.174 2.456 7.17l4.483-3.993Z" />
+                            </x-sidebar-link-icon>
+                        </x-slot>
+                        <x-slot name="label">
+                            Insights
+                        </x-slot>
+                        <x-slot name="dropdown">
+                            <x-sidebar-dropdown-link :active="Route::is('dashboard.insights')" :href="route('dashboard.insights')">Spending
+                                Analysis</x-sidebar-dropdown-link>
+                            <x-sidebar-dropdown-link :active="Route::is('dashboard.insights.funds-management')" :href="route('dashboard.insights.funds-management')">Funds
+                                Management</x-sidebar-dropdown-link>
+                        </x-slot>
+                    </x-sidebar-link>
+
+                    {{-- Notifications Link --}}
+                    @php
+                        $isNotificationsActive = in_array(Request::segment(1), ['notifications']);
+                    @endphp
+                    <x-sidebar-link :active="$isNotificationsActive" :href="route('dashboard.notifications')">
+                        <x-slot name="icon">
+                            <x-sidebar-link-icon :active="$isNotificationsActive">
+                                <path
+                                    class="fill-current @if ($isNotificationsActive) text-indigo-500 @else text-slate-600 @endif"
+                                    d="M19 6h-.2c-1.57-2.69-4.38-4.5-7.4-4.5C7.2 1.5 4.4 3.31 2.8 6H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1h17c.55 0 1-.45 1-1V7c0-.55-.45-1-1-1zM12 15c-2.757 0-5 2.243-5 5h10c0-2.757-2.243-5-5-5z" />
+                            </x-sidebar-link-icon>
+                        </x-slot>
+                        <x-slot name="label">
+                            Notifications
+                        </x-slot>
+                    </x-sidebar-link>
+
+                    {{-- Account Link --}}
+                    @php
+                        $isAccountActive = in_array(Request::segment(1), ['account', 'settings']);
+                    @endphp
+                    <x-sidebar-link :active="$isAccountActive" :force-open="$isAccountActive" href="#0" segment="account">
+                        <x-slot name="icon">
+                            <x-sidebar-link-icon :active="$isAccountActive">
+                                <path
+                                    class="fill-current @if ($isAccountActive) text-indigo-500 @else text-slate-600 @endif"
+                                    d="M12 16c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5zm0-8c-1.654 0-3 1.346-3 3s1.346 3 3 3 3-1.346 3-3-1.346-3-3-3z" />
+                                <path
+                                    class="fill-current @if ($isAccountActive) text-indigo-300 @else text-slate-400 @endif"
+                                    d="M12 24c-2.21 0-4.223-.892-5.612-2.388C5.39 19.633 5 17.857 5 16v-1c0-5.22 4.469-9.5 10-9.5s10 4.28 10 9.5v1c0 1.857-.39 3.633-1.388 5.612C16.223 23.108 14.21 24 12 24zM7 16v-1c0-3.86 3.139-7 7-7s7 3.14 7 7v1c0 1.304-.232 2.534-.647 3.657-1.659 4.282-11.343 4.282-13.353 0C7.232 18.534 7 17.304 7 16z" />
+                            </x-sidebar-link-icon>
+                        </x-slot>
+                        <x-slot name="label">
+                            Account
+                        </x-slot>
+                        <x-slot name="dropdown">
+                            <x-sidebar-dropdown-link :active="Route::is('dashboard.account')" :href="route('dashboard.account')">My
+                                Profile</x-sidebar-dropdown-link>
+                            <x-sidebar-dropdown-link :active="Route::is('dashboard.settings')"
+                                :href="route('dashboard.settings')">Settings</x-sidebar-dropdown-link>
+                        </x-slot>
+                    </x-sidebar-link>
+                </ul>
+
+
+
+                {{-- <ul class="mt-3">
 
                     <!-- Dashboard -->
                     <li class="px-3 py-2 rounded-sm mb-0.5 last:mb-0 @if (in_array(Request::segment(1), ['dashboard'])) {{ 'bg-slate-900' }} @endif"
@@ -74,7 +296,7 @@
                                 :class="open ? '!block' : 'hidden'">
                                 <li class="mb-1 last:mb-0">
                                     <a class="block text-slate-400 hover:text-slate-200 transition duration-150 truncate @if (Route::is('dashboard')) {{ '!text-indigo-500' }} @endif"
-                                        href="{{ route('dashboard') }}">
+                                        href="{{ route('dashboard.index') }}">
                                         <span
                                             class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Main</span>
                                     </a>
@@ -738,11 +960,11 @@
                             </ul>
                         </div>
                     </li>
-                </ul>
+                </ul> --}}
             </div>
 
             <!-- More group -->
-            <div>
+            {{-- <div>
                 <h3 class="text-xs uppercase text-slate-500 font-semibold pl-3">
                     <span class="hidden lg:block lg:sidebar-expanded:hidden 2xl:hidden text-center w-6"
                         aria-hidden="true">•••</span>
@@ -758,8 +980,7 @@
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center">
                                     <svg class="shrink-0 h-6 w-6" viewBox="0 0 24 24">
-                                        <path class="fill-current text-slate-600"
-                                            d="M8.07 16H10V8H8.07a8 8 0 110 8z" />
+                                        <path class="fill-current text-slate-600" d="M8.07 16H10V8H8.07a8 8 0 110 8z" />
                                         <path class="fill-current text-slate-400" d="M15 12L8 6v5H0v2h8v5z" />
                                     </svg>
                                     <span
@@ -1011,7 +1232,7 @@
                         </div>
                     </li>
                 </ul>
-            </div>
+            </div> --}}
         </div>
 
         <!-- Expand / collapse button -->

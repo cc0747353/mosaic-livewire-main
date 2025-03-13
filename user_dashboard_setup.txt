@@ -78,6 +78,8 @@ Here are pages, features, and UI ideas for a user dashboard of a bank website, b
                 *   **"FAQs/Help Center" Link:**  Links to a self-service knowledge base.
 
 
+
+
 **2. Loans Page (or Section):**
 
 *   **Page Title:** Loans / My Loans (or within "Accounts" section navigation)
