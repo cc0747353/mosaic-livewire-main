@@ -3,3 +3,4 @@
 .htaccess
 /node_modules
 /vendor
+/.vscode
