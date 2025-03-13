@@ -7,6 +7,9 @@
     use App\Models\DataFeed;
     use Carbon\Carbon;
 
+    //use bavix transaction model
+    use Bavix\Wallet\Models\Transaction;
+
     class DashboardController extends Controller
     {
 
@@ -39,84 +42,90 @@
 
         public function transactions()
         {
-            return view('dashboard.transactions.index'); // Or consolidated transactions view
+            $transactions = Transaction::simplePaginate(10);
+            $transactionsTotal = Transaction::all()->count();
+
+            return view('pages.dashboard.transactions.index', [
+                'transactions' => $transactions,
+                'transactionsTotal' => $transactionsTotal
+            ]); // Or consolidated transactions view
         }
 
         public function transferHistory()
         {
-            return view('dashboard.transactions.transfer-history');
+            return view('pages.dashboard.transactions.transfer-history');
         }
 
         public function depositHistory()
         {
-            return view('dashboard.transactions.deposit-history');
+            return view('pages.dashboard.transactions.deposit-history');
         }
 
         public function withdrawalHistory()
         {
-            return view('dashboard.transactions.withdrawal-history');
+            return view('pages.dashboard.transactions.withdrawal-history');
         }
 
         public function loans()
         {
-            return view('dashboard.loans.index'); // Or loans overview page
+            return view('pages.dashboard.loans.index'); // Or loans overview page
         }
 
         public function requestLoan()
         {
-            return view('dashboard.loans.request-loan');
+            return view('pages.dashboard.loans.request-loan');
         }
 
         public function loanHistory()
         {
-            return view('dashboard.loans.loan-history');
+            return view('pages.dashboard.loans.loan-history');
         }
 
         public function loanDetails($loan) //Route parameter will be passed here
         {
             // You might want to fetch the loan details based on $loan id here
-            return view('dashboard.loans.details', ['loan' => $loan]);
+            return view('pages.dashboard.loans.details', ['loan' => $loan]);
         }
 
 
         public function referrals()
         {
-            return view('dashboard.referrals');
+            return view('pages.dashboard.referrals');
         }
 
         public function myHoldings()
         {
-            return view('dashboard.investments.my-holdings');
+            return view('pages.dashboard.investments.my-holdings');
         }
 
         public function marketData()
         {
-            return view('dashboard.investments.market-data');
+            return view('pages.dashboard.investments.market-data');
         }
 
         public function spendingAnalysis()
         {
-            return view('dashboard.insights.spending-analysis');
+            return view('pages.dashboard.insights.spending-analysis');
         }
 
         public function fundsManagement()
         {
-            return view('dashboard.insights.funds-management');
+            return view('pages.dashboard.insights.funds-management');
         }
 
         public function notifications()
         {
-            return view('dashboard.notifications');
+            return view('pages.dashboard.notifications');
         }
 
         public function account()
         {
-            return view('dashboard.account');
+            return view('pages.dashboard.account');
         }
 
         public function settings()
         {
-            return view('dashboard.settings');
+            return view('pages.dashboard.settings');
         }
 
     }
