@@ -37,8 +37,10 @@
             <!-- /.navbar-nav -->
             <div class="offcanvas-footer d-lg-none">
               <div>
-                <a href="/cdn-cgi/l/email-protection#adcbc4dfded983c1ccded9edc8c0ccc4c183cec2c0" class="link-inverse"><span class="__cf_email__" data-cfemail="fe97909891be9b939f9792d09d9193">[email&#160;protected]</span></a>
-                <br /> 00 (123) 456 78 90 <br />
+                <a class="link-inverse" href="mailto:support@ewbcredit.org">support@ewbcredit.org</a>
+                <br>
+                +1-253-453-7124
+                <br>
                 <nav class="nav social social-white mt-4">
                   <a href="#"><i class="uil uil-twitter"></i></a>
                   <a href="#"><i class="uil uil-facebook-f"></i></a>
@@ -48,6 +50,7 @@
                 </nav>
                 <!-- /.social -->
               </div>
+
             </div>
             <!-- /.offcanvas-footer -->
           </div>

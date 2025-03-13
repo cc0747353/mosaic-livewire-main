@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/colors/grape.css">
     <link rel="preload" href="/assets/css/fonts/space.css" as="style" onload="this.rel='stylesheet'">
+
 </head>
 
 <body>
@@ -89,6 +90,9 @@
             <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
         </svg>
     </div>
+    <!-- Elfsight Website Translator | Untitled Website Translator -->
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+    <div class="elfsight-app-fcb2b582-0d95-4edf-8f2d-c7bb8bceaa8f" data-elfsight-app-lazy></div>
     <script src="/assets/js/plugins.js"></script>
     <script src="/assets/js/theme.js"></script>
 </body>
